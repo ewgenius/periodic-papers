@@ -1,18 +1,43 @@
 <link rel="import" href="../../bower_components/polymer/polymer.html">
+<link rel="import" href="../../bower_components/app-layout/app-header-layout/app-header-layout.html">
+<link rel="import" href="../../bower_components/app-layout/app-header/app-header.html">
+<link rel="import" href="../../bower_components/app-layout/app-toolbar/app-toolbar.html">
+<link rel="import" href="../../bower_components/app-layout/app-box/app-box.html">
+<link rel="import" href="../../bower_components/paper-icon-button/paper-icon-button.html">
 
 <dom-module id="periodic-papers-app">
   <template>
     <style>
       :host {
         display: block;
+        font-family: 'Roboto', sans-serif;
+      }
+
+      .content {
+        height: 1000px;
+      }
+
+      app-toolbar {
+        height: 56px;
       }
     </style>
-    <h2>Hello [[prop1]]</h2>
+    <app-header-layout fullbleed>
+      <app-header fixed shadow>
+        <app-toolbar>
+          <div main-title>Periodic papers</div>
+          <paper-icon-button icon="search"></paper-icon-button>
+        </app-toolbar>
+      </app-header>
+      <app-box fullbleed>
+        <div class="content">
+          main content
+        </div>
+      </app-box>
+    </app-header-layout>
   </template>
 
   <script>
     Polymer({
-
       is: 'periodic-papers-app',
 
       properties: {
@@ -20,8 +45,7 @@
           type: String,
           value: 'periodic-papers-app',
         },
-      },
-
+      }
     });
   </script>
 </dom-module>
