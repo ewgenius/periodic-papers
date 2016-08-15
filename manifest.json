@@ -1,0 +1,7 @@
+{
+  "name": "periodic-papers",
+  "short_name": "periodic-papers",
+  "description": "polymer realisation of http://www.materialup.com/posts/periodic-table-concept-animation concept",
+  "start_url": "/",
+  "display": "standalone"
+}
