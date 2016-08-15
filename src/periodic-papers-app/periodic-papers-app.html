@@ -4,21 +4,50 @@
 <link rel="import" href="../../bower_components/app-layout/app-toolbar/app-toolbar.html">
 <link rel="import" href="../../bower_components/app-layout/app-box/app-box.html">
 <link rel="import" href="../../bower_components/paper-icon-button/paper-icon-button.html">
+<link rel="import" href="../../bower_components/iron-icons/iron-icons.html">
+
+// main-color: #2e3542
+// rooler-font-color: #505e76
+// rooler-top-bg-color: #252932
+// rooler-left-bg-color: #1e222a
+
+// elements-color-1: #383a78
+// elements-color-2: #63414b
+// elements-color-3: #685146
+// elements-color-4: #46536c
+// elements-color-5: #534e4b
+// elements-color-6: #534345
 
 <dom-module id="periodic-papers-app">
   <template>
     <style>
       :host {
         display: block;
-        font-family: 'Roboto', sans-serif;
+        font-family: 'Lato', 'Roboto', sans-serif;
+        color: #fff;
+        background-color: #2e3542;
       }
 
-      .content {
-        height: 1000px;
+      app-header-layout {
+        background-color: #2e3542;
+      }
+
+      app-header {
+        background-color: #2e3542;
+        color: #fff;
       }
 
       app-toolbar {
         height: 56px;
+      }
+
+      .scroller {
+        overflow: auto;
+      }
+
+      .content {
+        width: 1000px;
+        height: 1000px;
       }
     </style>
     <app-header-layout fullbleed>
@@ -26,13 +55,14 @@
         <app-toolbar>
           <div main-title>Periodic papers</div>
           <paper-icon-button icon="search"></paper-icon-button>
+          <paper-icon-button icon="more-vert"></paper-icon-button>
         </app-toolbar>
       </app-header>
-      <app-box fullbleed>
+      <div class="scroller">
         <div class="content">
           main content
         </div>
-      </app-box>
+      </div>
     </app-header-layout>
   </template>
 
