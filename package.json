@@ -1,0 +1,22 @@
+{
+  "name": "periodic-papers",
+  "version": "0.1.0",
+  "description": "polymer realization of http://www.materialup.com/posts/periodic-table-concept-animation concept",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ewgenius/periodic-papers.git"
+  },
+  "keywords": [
+    "react"
+  ],
+  "author": "ewgeniux@gmail.com",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ewgenius/periodic-papers/issues"
+  },
+  "homepage": "https://github.com/ewgenius/periodic-papers#readme"
+}

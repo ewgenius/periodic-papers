@@ -8,18 +8,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
   <link rel="manifest" href="/manifest.json">
   <meta name="theme-color" content="#2e3542">
-  <script src="/bower_components/webcomponentsjs/webcomponents.js"></script>
-  <link rel="import" href="/src/periodic-papers-app/periodic-papers-app.html">
   <link href="https://fonts.googleapis.com/css?family=Lato|Raleway|Roboto" rel="stylesheet">
 </head>
 
 <body>
-  <script>
-    if ('serviceWorker' in navigator) {
-      navigator.serviceWorker.register('/service-worker.js');
-    }
-  </script>
-  <periodic-papers-app></periodic-papers-app>
+  <script src='/app.bundle.js'></script>
+  <script src='/vendor.bundle.js'></script>
 </body>
 
 </html>
