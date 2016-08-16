@@ -32,16 +32,20 @@
 
         --primary-background-color: #2e3542;
         --primary-text-color: #fff;
+
+        --ruler-text-color: #505e76;
+        --ruler-left-bg-color: #1e222a;
+        --ruler-top-bg-color: #252932;
       }
 
 
       app-header-layout {
-        background-color: #2e3542;
+        background-color: var(--primary-background-color);
       }
 
       app-header {
-        background-color: #2e3542;
-        color: #fff;
+        background-color: var(--primary-background-color);
+        color: var(--primary-text-color);
       }
 
       app-toolbar {
@@ -52,9 +56,55 @@
         overflow: auto;
       }
 
-      .content {
-        width: 1000px;
-        height: 1000px;
+      .grid {
+        display: flex;
+        flex-flow: column;
+      }
+
+      .grid-wrapper {
+        display: flex;
+        flex-flow: row;
+      }
+
+      .grid-content > div {
+        width: 60px;
+        height: 60px;
+        background-color: #383a78;
+      }
+
+      .ruler {
+        display: flex;
+        color: var(--ruler-text-color);
+      }
+
+      .ruler > div {
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 14px;
+      }
+
+      .ruler-top {
+        background-color: var(--ruler-top-bg-color);
+        width: calc(60px * 11 + 24px);
+        height: 24px;
+        flex-flow: row;
+        padding-left: 24px;       
+      }
+
+      .ruler-top > div {
+        width: 60px;
+      }
+
+      .ruler-left {
+        background-color: var(--ruler-left-bg-color);
+        width: 24px;
+        flex-flow: column;
+      }
+
+      .ruler-left > div {
+        height: 60px;
       }
     </style>
     <app-header-layout fullbleed>
@@ -72,8 +122,48 @@
         </app-toolbar>
       </app-header>
       <div class="scroller">
-        <div class="content">
-          main content
+        <div class="grid">
+          <div class="ruler ruler-top">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+            <div>4</div>
+            <div>5</div>
+            <div>6</div>
+            <div>7</div>
+            <div>8</div>
+            <div>9</div>
+            <div>10</div>
+            <div>11</div>
+          </div>
+          <div class="grid-wrapper">
+            <div class="ruler ruler-left">
+              <div>1</div>
+              <div>2</div>
+              <div>3</div>
+              <div>4</div>
+              <div>5</div>
+              <div>6</div>
+              <div>7</div>
+              <div>8</div>
+              <div>9</div>
+              <div>10</div>
+              <div>11</div>
+            </div>
+            <div class="grid-content">          
+              <div>1</div>
+              <div>2</div>
+              <div>3</div>
+              <div>4</div>
+              <div>5</div>
+              <div>6</div>
+              <div>7</div>
+              <div>8</div>
+              <div>9</div>
+              <div>10</div>
+              <div>11</div>
+            </div>            
+          </div>
         </div>
       </div>
     </app-header-layout>
