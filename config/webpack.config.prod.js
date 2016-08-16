@@ -17,9 +17,14 @@ module.exports = {
   },
   plugins: [
     new webpack.optimize.CommonsChunkPlugin('vendor', 'vendor.bundle.js', Infinity),
+    new webpack.optimize.UglifyJsPlugin({
+      compress: {
+        warnings: false
+      }
+    }),
     new webpack.DefinePlugin({
       "process.env": {
-        NODE_ENV: JSON.stringify("development")
+        NODE_ENV: JSON.stringify("production")
       }
     })
   ]
