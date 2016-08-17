@@ -1,0 +1,23 @@
+@import '../../styles/_palette.scss';
+
+.grid {
+  .ruler {
+    color: $rooler-font-color;
+    &.ruler-top {
+      background-color: $rooler-top-bg-color;
+    }
+    &.ruler-left {
+      background-color: $rooler-left-bg-color;
+    }
+    &>div {
+      text-align: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 12px;
+    }
+  }
+  .item {
+    float: left;
+  }
+}

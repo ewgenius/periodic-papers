@@ -11,6 +11,7 @@ import MenuItem from 'material-ui/MenuItem'
 import MoreVertIcon from 'material-ui/svg-icons/navigation/more-vert'
 import Snackbar from 'material-ui/Snackbar'
 import ScrollView from '../ScrollView/ScrollView.jsx'
+import Grid from '../Grid/Grid.jsx'
 
 const mapProps = state => ({
   showAlert: state.showAlert,
@@ -61,7 +62,22 @@ class App extends Component {
         />
 
       <ScrollView>
-        <div style={{ width: 1000, height: 1000 }}/>
+        <Grid
+          width={18}
+          height={9}
+          itemWidth={80}
+          itemHeight={80}
+          items={[
+            [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18],
+            [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18],
+            [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18],
+            [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18],
+            [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18],
+            [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18],
+            [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18],
+            [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18],
+            [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18]            
+          ]}/>
       </ScrollView>
 
       <Snackbar
