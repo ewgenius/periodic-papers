@@ -5,7 +5,7 @@ const vendor = require('./vendor')
 
 module.exports = {
   entry: {
-    app: ['./src/app.jsx'],
+    app: ['webpack-dev-server/client?http://localhost:8080/', 'webpack/hot/dev-server', './src/app.jsx'],
     vendor
   },
   output: {
@@ -17,6 +17,7 @@ module.exports = {
   },
   plugins: [
     new webpack.optimize.CommonsChunkPlugin('vendor', 'vendor.bundle.js', Infinity),
+    new webpack.HotModuleReplacementPlugin(),
     new webpack.DefinePlugin({
       "process.env": {
         NODE_ENV: JSON.stringify("development")

@@ -19,8 +19,8 @@ gulp.task('copy', () => {
 })
 
 gulp.task('assets', () => {
-  return gulp.src('./assets/icons/**/*')
-    .pipe(gulp.dest(`${BUILD_PATH}/assets/icons`))
+  return gulp.src('./assets/**/*')
+    .pipe(gulp.dest(`${BUILD_PATH}/assets`))
 })
 
 gulp.task('webpack', cb => {
