@@ -1,4 +1,4 @@
-const staticCacheName = 'periodic-papers-static-v1' 
+const staticCacheName = 'periodic-papers-static-v2' 
 
 self.addEventListener('install', event => {
   

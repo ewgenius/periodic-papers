@@ -34,7 +34,7 @@ class App extends Component {
   }
 
   reloadApp() {
-
+    location.reload()
   }
 
   render() {
@@ -55,6 +55,7 @@ class App extends Component {
             >
             <MenuItem primaryText="Settings" />
             <MenuItem primaryText="About" />
+            <MenuItem primaryText="Refresh" onTouchTap={this.reloadApp}/>
           </IconMenu>
         }
         />
