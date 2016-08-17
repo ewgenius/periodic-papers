@@ -6,7 +6,10 @@ import {Provider} from 'react-redux'
 import reducer from './reducer'
 import {showAlert} from './actions'
 import configure from  'react-tap-event-plugin'
+import PouchDB from 'pouchdb'
 import './styles/main.scss'
+
+window.PouchDB = PouchDB
 
 import App from './components/App/App.jsx'
 
@@ -34,6 +37,11 @@ configure()
 
 const root = document.getElementById('root')
 const store = createStore(reducer)
+const db = new PouchDB('elements')
+db.put({
+  _id: '0',
+  name: 'test'
+})
 
 function updateReady(worker) {
   store.dispatch(showAlert('New version is ready', 'reload', () => {

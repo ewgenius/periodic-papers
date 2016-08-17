@@ -31,7 +31,7 @@ export default class Grid extends Component {
 
     return <div className='grid layout column' style={{
       width: itemsWidth + rulerWidth,
-      height: itemsHeight + rulerHeight
+      height: itemsHeight + rulerHeight * 2
     }}>
       <div className='ruler ruler-top layout row' style={{
         paddingLeft: rulerWidth,
@@ -45,10 +45,10 @@ export default class Grid extends Component {
       <div className='layout row'>
         <div className='ruler ruler-left layout column' style={{
           width: rulerWidth,
-          height: itemsHeight
+          height: itemsHeight + rulerHeight
         }}>
           {
-            range(1, height + 1).map(i => <div key={i} style={{ height: itemHeight }}>{i}</div>)
+            range(1, height + 1).map(i => <div className={`${i === 7 ? 'row-margin' : ''}`} key={i} style={{ height: itemHeight }}>{i}</div>)
           }
         </div>
         <div className='items layout column' style={{
@@ -57,7 +57,7 @@ export default class Grid extends Component {
         }}>
           {
             items.map((row, i) => {
-              return <div className='row' key={i}>
+              return <div className={`row ${i === 6 ? 'row-margin' : ''}`} key={i}>
                 {
                   row.map((item, j) => {
                     return <div className={`item ${!item ? 'blank' : 'item_' + item}`} key={j} style={{

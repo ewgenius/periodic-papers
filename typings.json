@@ -3,6 +3,8 @@
   "dependencies": {},
   "globalDependencies": {
     "material-ui": "registry:dt/material-ui#0.15.1+20160720000941",
+    "pouchdb": "registry:dt/pouchdb#5.4.4+20160724064500",
+    "pouchdb-core": "registry:dt/pouchdb-core#5.4.4+20160724064500",
     "react": "registry:dt/react#0.14.0+20160805125551",
     "react-dom": "registry:dt/react-dom#0.14.0+20160412154040",
     "react-redux": "registry:dt/react-redux#4.4.0+20160724070751",

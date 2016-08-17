@@ -65,8 +65,8 @@ class App extends Component {
         <Grid
           width={18}
           height={9}
-          itemWidth={80}
-          itemHeight={80}
+          itemWidth={64}
+          itemHeight={64}
           items={[
             [1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1],
             [2, 3, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],

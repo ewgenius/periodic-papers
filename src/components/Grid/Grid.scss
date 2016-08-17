@@ -10,12 +10,16 @@
       background-color: $rooler-left-bg-color;
     }
     &>div {
+      font-weight: bold;
       text-align: center;
       display: flex;
       align-items: center;
       justify-content: center;
-      font-size: 12px;
+      font-size: 11px;
     }
+  }
+  .row-margin {
+    margin-bottom: 24px;
   }
   .item {
     float: left;
@@ -26,7 +30,6 @@
     &:not(.blank) {
       background-color: $elements-color-1;
     }
-
     &.item_1 {
       background-color: $elements-color-1;      
     }
