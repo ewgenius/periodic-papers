@@ -1,8 +1,11 @@
 import React from 'react'
 import {render} from 'react-dom'
-import {AppBar} from 'material-ui'
+import configure from  'react-tap-event-plugin'
 import './styles/main.scss'
 
+import App from './components/App/App.jsx'
+
+configure()
 const root = document.getElementById('root')
 
-render(<div>app</div>, root)
+render(<App/>, root)
