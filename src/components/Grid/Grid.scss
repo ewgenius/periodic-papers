@@ -19,5 +19,31 @@
   }
   .item {
     float: left;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    &:not(.blank) {
+      background-color: $elements-color-1;
+    }
+
+    &.item_1 {
+      background-color: $elements-color-1;      
+    }
+    &.item_2 {
+      background-color: $elements-color-2;      
+    }    
+    &.item_3 {
+      background-color: $elements-color-3;      
+    }    
+    &.item_4 {
+      background-color: $elements-color-4;      
+    }    
+    &.item_5 {
+      background-color: $elements-color-5;      
+    }    
+    &.item_6 {
+      background-color: $elements-color-6;      
+    }    
   }
 }

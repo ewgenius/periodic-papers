@@ -60,10 +60,10 @@ export default class Grid extends Component {
               return <div className='row' key={i}>
                 {
                   row.map((item, j) => {
-                    return <div className='item' key={j} style={{
+                    return <div className={`item ${!item ? 'blank' : 'item_' + item}`} key={j} style={{
                       width: itemWidth,
                       height: itemHeight
-                    }}>{item}</div>
+                    }}>{item ? item : null}</div>
                   })
                 }
               </div>
