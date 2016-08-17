@@ -24,6 +24,13 @@ const theme = getMuiTheme({
 })
 
 configure()
+
+if ('serviceWorker' in window.navigator) {
+  window.navigator.serviceWorker.register('/sw.js', reg => {
+    console.log(reg)
+  })
+}
+
 const root = document.getElementById('root')
 
 render(<MuiThemeProvider muiTheme={theme}>
