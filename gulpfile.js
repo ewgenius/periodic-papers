@@ -1,6 +1,7 @@
 const gulp = require('gulp')
 const gutil = require('gulp-util')
 const file = require('gulp-file')
+const babel = require('gulp-babel')
 const webpack = require('webpack')
 const WebpackDevServer = require('webpack-dev-server')
 
@@ -21,6 +22,14 @@ gulp.task('copy', () => {
 gulp.task('assets', () => {
   return gulp.src('./assets/**/*')
     .pipe(gulp.dest(`${BUILD_PATH}/assets`))
+})
+
+gulp.task('sw', () => {
+  return gulp.src(`${SRC_PATH}/sw.js`)
+    .pipe(babel({
+      presets: ['es2015', 'stage-0']
+    }))
+    .pipe(gulp.dest(`${BUILD_PATH}`))
 })
 
 gulp.task('webpack', cb => {
