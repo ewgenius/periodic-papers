@@ -17,6 +17,7 @@ const mapProps = state => ({
   showAlert: state.showAlert,
   alertMessage: state.alertMessage,
   alertAction: state.alertAction,
+  data: state.data,
   alertActionHandler: state.alertActionHandler
 })
 
@@ -26,6 +27,7 @@ class App extends Component {
     alertMessage: PropTypes.string,
     alertAction: PropTypes.string,
     alertActionHandler: PropTypes.func,
+    data: PropTypes.array,
     
     dispatch: PropTypes.func.isRequired
   }

@@ -7,7 +7,8 @@ const initial = {
   showAlert: false,
   alertMessage: 'test',
   alertAction: 'action',
-  alertActionHandler: () => {}
+  alertActionHandler: () => {},
+  data: [[]]
 }
 
 export default (state = initial, action) => {

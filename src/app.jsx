@@ -56,7 +56,9 @@ const firebaseApp = firebase.initializeApp({
   storageBucket: "periodic-papers.appspot.com",
 })
 
-console.log(firebaseApp.database())
+firebaseApp.database().ref('/elements').once('value').then(elements => {
+  console.log(elements.val())
+})
 
 function updateReady(worker) {
   store.dispatch(showAlert('New version is ready', 'reload', () => {
