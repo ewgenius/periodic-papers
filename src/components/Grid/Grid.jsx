@@ -25,7 +25,6 @@ export default class Grid extends Component {
 
   render() {
     const {width, height, itemWidth, itemHeight, rulerHeight, rulerWidth, items} = this.props
-
     const itemsWidth = width * itemWidth
     const itemsHeight = height * itemHeight
 

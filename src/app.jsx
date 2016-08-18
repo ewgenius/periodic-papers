@@ -7,6 +7,7 @@ import reducer from './reducer'
 import {showAlert} from './actions'
 import configure from  'react-tap-event-plugin'
 import PouchDB from 'pouchdb'
+import firebase from 'firebase'
 import './styles/main.scss'
 
 window.PouchDB = PouchDB
@@ -37,11 +38,25 @@ configure()
 
 const root = document.getElementById('root')
 const store = createStore(reducer)
+
 const db = new PouchDB('elements')
-db.put({
-  _id: '0',
-  name: 'test'
+db.info().then(info => {
+  //console.log(info)
+  /*db.put({
+    _id: '0',
+    name: 'test'
+  })*/
 })
+
+
+const firebaseApp = firebase.initializeApp({
+  apiKey: "AIzaSyDIF7cC7wF-KwXeQPj3U9l-ohCP45FBEY8",
+  authDomain: "periodic-papers.firebaseapp.com",
+  databaseURL: "https://periodic-papers.firebaseio.com",
+  storageBucket: "periodic-papers.appspot.com",
+})
+
+console.log(firebaseApp.database())
 
 function updateReady(worker) {
   store.dispatch(showAlert('New version is ready', 'reload', () => {

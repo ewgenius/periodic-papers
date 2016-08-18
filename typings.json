@@ -2,6 +2,7 @@
   "name": "periodic-papers",
   "dependencies": {},
   "globalDependencies": {
+    "firebase": "registry:dt/firebase#2.4.1+20160412125105",
     "material-ui": "registry:dt/material-ui#0.15.1+20160720000941",
     "pouchdb": "registry:dt/pouchdb#5.4.4+20160724064500",
     "pouchdb-core": "registry:dt/pouchdb-core#5.4.4+20160724064500",

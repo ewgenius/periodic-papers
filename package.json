@@ -38,6 +38,7 @@
     "webpack-dev-server": "^1.14.1"
   },
   "dependencies": {
+    "firebase": "^3.3.0",
     "material-ui": "^0.15.4",
     "ramda": "^0.22.1",
     "react": "^15.3.0",
